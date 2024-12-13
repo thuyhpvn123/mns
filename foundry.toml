@@ -1,0 +1,16 @@
+[profile.default]
+src = "contracts"
+out = "out"
+libs = ["lib"]
+remappings = [
+    '@openzeppelin/contracts=node_modules/@openzeppelin/contracts',
+    '@ensdomains/solsha1=node_modules/@ensdomains/solsha1',
+    '@ensdomains/buffer=node_modules/@ensdomains/buffer'
+
+]
+fs_permissions = [{ access = "read", path = "./out"}]
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+[profile.hardhat]
+src = "../contracts"
+
+solc_version = "0.8.19"
